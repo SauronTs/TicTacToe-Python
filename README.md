@@ -8,7 +8,7 @@ Can you beat the AI? ;)
 #### Version
 
 This is the Python version of the game.
-You can find the twin repo's written in Java and C++ here on my github or directly https://github.com/SauronTs/TicTacToe-Java and https://github.com/SauronTs/TicTacToe
+You can find the twin repo's written in **Java** and **C++** here on my github or directly https://github.com/SauronTs/TicTacToe-Java and https://github.com/SauronTs/TicTacToe
 
 #### Things used
 No graphics libraries. Only simple text output.
