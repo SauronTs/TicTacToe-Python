@@ -74,8 +74,8 @@ class TicTacToe():
 
     def nextAIMove(self):
         bestScore = 1
-        bestX = -1
-        bestY = -1
+        moves = {}
+        bestMoves = []
 
         for i in range(0, 3):
             for a in range(0, 3):
@@ -83,13 +83,18 @@ class TicTacToe():
                     self.setPosition(i, a, False)
                     score = self.minimax(0, False)
                     self.deletePosition(i, a)
-
+                    
+                    moves[(i, a)] = score
                     if(score > bestScore):
                         bestScore = score
-                        bestX = i
-                        bestY = a
 
-        self.setPosition(bestX, bestY, False)
+        for key, value in moves.items():
+            if value == bestScore:
+                bestMoves.append(key)
+
+        position = bestMoves[random.randint(0, len(bestMoves) - 1)]
+
+        self.setPosition(position[0], position[1], False)
 
     def minimax(self, depth, isMax):
         bestScore = 3
